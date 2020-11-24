@@ -1,5 +1,5 @@
 /.idea
-/conf/application.ini
+/conf/app.ini
 /node_modules
 /vendor
 .phpunit.result.cache
