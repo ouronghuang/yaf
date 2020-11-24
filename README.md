@@ -1,12 +1,62 @@
-可以按照以下步骤来部署和运行程序:
+## 项目概述
 
-1. 请确保机器 root@localhost 已经安装了 Yaf 框架, 并且已经加载入 PHP;
-2. 把 yaf_skeleton 目录 Copy 到 Webserver 的 DocumentRoot 目录下;
-3. 需要在 php.ini 里面启用如下配置，生产的代码才能正确运行：
-	
+- 产品名称：Yaf
+- 项目代号：yaf
+
+## 运行环境
+
+- PHP 7.0+
+- Yaf 3.0+
+
+## 前置安装
+
+1. 安装 Yaf 扩展
+
+* [源码编译](https://github.com/laruence/yaf)
+* [Pecl 安装](https://ouronghuang.com/articles/46)
+
+2. 启用 Yaf 命名空间功能
+
 ```
- yaf.environ="product"
- ```
-	
-4. 重启 Webserver;
-5. 访问 http://yourhost/yaf_skeleton/, 出现 Hellow Word!, 表示运行成功, 否则请查看 php 错误日志;
+// /usr/local/php/etc/php.ini
+
+[yaf]
+yaf.use_namespace = On
+yaf.use_spl_autoload = On
+```
+
+## 基础安装
+
+1. 克隆源代码
+
+```
+$ git clone git@gitee.com:orh/yaf.git
+```
+
+2. 生成配置
+
+```
+$ cp conf/app.ini.example conf/app.ini
+```
+
+3. 安装扩展包
+
+```
+$ composer install
+```
+
+4. 配置 Nginx 伪静态
+
+```
+// /usr/local/nginx/conf/rewrite/yaf.conf
+
+if (!-e $request_filename) {
+    rewrite ^/(.*) /index.php/$1 last;
+}
+```
+
+## 扩展相关
+
+| 扩展包 | 描述 | 应用 |
+| --- | --- | --- |
+| [guzzlehttp/guzzle](https://packagist.org/packages/guzzlehttp/guzzle) | HTTP 请求套件 | - |
