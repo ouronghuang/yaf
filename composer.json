@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.0",
+        "ext-yaf": "^3.0",
         "guzzlehttp/guzzle": "~6.5.0"
     },
     "require-dev": {
