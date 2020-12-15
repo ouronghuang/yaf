@@ -1,7 +1,7 @@
 /.idea
-/conf/app.ini
 /node_modules
 /vendor
+.php_cs.cache
 .phpunit.result.cache
 npm-debug.log
 yarn-error.log
