@@ -13,7 +13,8 @@
         "guzzlehttp/guzzle": "~6.5.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~8.5.0"
+        "phpunit/phpunit": "~8.5.0",
+        "friendsofphp/php-cs-fixer": "~2.17.0"
     },
     "autoload": {
         "files": [
@@ -27,5 +28,7 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "scripts": {}
+    "scripts": {
+        "phpcs": "vendor/bin/php-cs-fixer fix"
+    }
 }

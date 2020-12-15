@@ -1,21 +1,10 @@
 <?php
 
-/**
- * @name Bootstrap
- * @author root
- * @desc 所有在 Bootstrap 类中，以 _init 开头的方法，都会被 Yaf 调用
- * @see http://www.php.net/manual/en/class.yaf-bootstrap-abstract.php
- * 这些方法，都接受一个参数：\Yaf\Dispatcher $dispatcher
- * 调用的次序，和申明的次序相同
- */
-
-use \Yaf\{
-    Application,
-    Bootstrap_Abstract,
-    Dispatcher,
-    Loader,
-    Registry
-};
+use Yaf\Application;
+use Yaf\Bootstrap_Abstract;
+use Yaf\Dispatcher;
+use Yaf\Loader;
+use Yaf\Registry;
 
 class Bootstrap extends Bootstrap_Abstract
 {

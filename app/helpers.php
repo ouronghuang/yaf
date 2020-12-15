@@ -1,5 +1,6 @@
 <?php
 
-function dd() {
-    return 'dd';
+function dd()
+{
+    return 'yaf';
 }
