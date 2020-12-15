@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+<?php
+
+// php request.php "request_uri=/index/hello"
+
+define('YAF_START', microtime(true));
+define('APP_PATH', dirname(__FILE__));
+
+$app = new \Yaf\Application(APP_PATH.'/conf/app.ini');
+$app->getDispatcher()->dispatch(new \Yaf\Request\Simple());
