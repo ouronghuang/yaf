@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-// php request.php "request_uri=/index/hello"
+// php artisan "request_uri=/index/hello"
 
 define('YAF_START', microtime(true));
 define('APP_PATH', dirname(__FILE__));
