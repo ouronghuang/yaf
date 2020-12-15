@@ -26,18 +26,11 @@ class IndexController extends \Yaf\Controller_Abstract
      */
     public function indexAction($name = 'Stranger')
     {
-        // 1. fetch query
-        $get = $this->getRequest()->getQuery('get', 'default value');
-
-        // 2. fetch model
-        $model = new SampleModel();
-
-        // 3. assign
-        $this->getView()->assign('content', $model->selectSample());
-        $this->getView()->assign('name', $name);
-
         // if `yaf.use_namespace = On`
-        echo Yaf\VERSION.'<br><br>';
+        echo '<h3>Yaf version:</h3>';
+        echo Yaf\VERSION;
+
+        echo '<h3>Declared classes:</h3>';
 
         $classes = get_declared_classes();
 
@@ -47,7 +40,26 @@ class IndexController extends \Yaf\Controller_Abstract
             }
         }
 
-        // 4. render by Yaf, 如果这里返回FALSE, Yaf将不会调用自动视图引擎Render模板
+        echo '<h3>Declared interfaces:</h3>';
+
+        $interfaces = get_declared_interfaces();
+
+        foreach ($interfaces as $interface) {
+            if (preg_match('/^Yaf.*/', $interface)) {
+                echo "{$interface}<br>";
+            }
+        }
+
+        echo '<h3>Defined constants:</h3>';
+
+        $constants = get_defined_constants();
+
+        foreach ($constants as $k => $v) {
+            if (preg_match('/^YAF.*/', $k)) {
+                echo "{$k}: {$v}<br>";
+            }
+        }
+
         return false;
     }
 }
