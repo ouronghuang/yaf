@@ -1,5 +1,6 @@
 <?php
 
+use Orh\Yaf\View\View;
 use Yaf\Application;
 use Yaf\Bootstrap_Abstract;
 use Yaf\Dispatcher;
@@ -16,8 +17,8 @@ class Bootstrap extends Bootstrap_Abstract
     public function _initConfig()
     {
         // 把配置保存起来
-        $arrConfig = Application::app()->getConfig();
-        Registry::set('config', $arrConfig);
+        $config = Application::app()->getConfig();
+        Registry::set('config', $config);
     }
 
     public function _initPlugin(Dispatcher $dispatcher)
@@ -34,6 +35,6 @@ class Bootstrap extends Bootstrap_Abstract
 
     public function _initView(Dispatcher $dispatcher)
     {
-        // 在这里注册自己的 view 控制器，例如 smarty, firekylin
+        $dispatcher->setView(View::smarty());
     }
 }

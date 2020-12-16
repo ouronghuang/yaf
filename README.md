@@ -45,13 +45,13 @@ $ cp conf/app.ini.example conf/app.ini
 $ composer install
 ```
 
-4. 配置 Nginx 伪静态
+4. 配置 Nginx 优雅链接
 
 ```
 // /usr/local/nginx/conf/rewrite/yaf.conf
 
-if (!-e $request_filename) {
-    rewrite ^/(.*) /index.php/$1 last;
+location / {
+    try_files $uri $uri/ /index.php?$query_string;
 }
 ```
 

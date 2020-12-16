@@ -2,4 +2,9 @@
 application.directory = APP_PATH "/app"
 application.dispatcher.catchException = true
 
+smarty.templateDir = APP_PATH "/resources/views/"
+smarty.compileDir = APP_PATH "/storage/smarty/compiles/"
+smarty.configDir = APP_PATH "/storage/smarty/configs/"
+smarty.cacheDir = APP_PATH "/storage/smarty/caches/"
+
 [product:common]
