@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a44a4a1645793e92c7ba18150e78d2f3",
+    "content-hash": "fac0ed2a4d69a16616a09dfd23218ecb",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -215,16 +215,16 @@
         },
         {
             "name": "orh/yaf-framework",
-            "version": "v0.1.0",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ouronghuang/yaf-framework.git",
-                "reference": "1c3914e736854bc5375c2145f69a1298714176a8"
+                "reference": "bf9f97fe50396f198c7514b2d1486a9878a401d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ouronghuang/yaf-framework/zipball/1c3914e736854bc5375c2145f69a1298714176a8",
-                "reference": "1c3914e736854bc5375c2145f69a1298714176a8",
+                "url": "https://api.github.com/repos/ouronghuang/yaf-framework/zipball/bf9f97fe50396f198c7514b2d1486a9878a401d0",
+                "reference": "bf9f97fe50396f198c7514b2d1486a9878a401d0",
                 "shasum": "",
                 "mirrors": [
                     {
@@ -266,9 +266,9 @@
             ],
             "support": {
                 "issues": "https://github.com/ouronghuang/yaf-framework/issues",
-                "source": "https://github.com/ouronghuang/yaf-framework/tree/v0.1.0"
+                "source": "https://github.com/ouronghuang/yaf-framework/tree/v0.2.0"
             },
-            "time": "2020-12-16T08:00:02+00:00"
+            "time": "2020-12-17T06:43:25+00:00"
         },
         {
             "name": "psr/http-message",
