@@ -19,7 +19,7 @@ class IndexController extends \Yaf\Controller_Abstract
     {
         // $this->yaf();
 
-        $this->getView()->assign('name','Ned');
+        $this->getView()->assign('name', 'Ned');
     }
 
     protected function yaf()
